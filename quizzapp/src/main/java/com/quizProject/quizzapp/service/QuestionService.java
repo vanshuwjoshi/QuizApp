@@ -1,12 +1,13 @@
-package service;
+package com.quizProject.quizzapp.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import model.Question;
-import repository.QuestionDAO;
+import com.quizProject.quizzapp.model.Question;
+import com.quizProject.quizzapp.repository.QuestionDAO;
+
 
 @Service
 public class QuestionService {
@@ -20,3 +21,4 @@ public class QuestionService {
 	}
 
 }
+

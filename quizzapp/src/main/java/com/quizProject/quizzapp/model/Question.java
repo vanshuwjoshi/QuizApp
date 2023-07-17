@@ -1,7 +1,8 @@
-package model;
+package com.quizProject.quizzapp.model;
 
 import java.util.Objects;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,13 +13,17 @@ import jakarta.persistence.Table;
 @Table(name = "questions")
 public class Question {
 	@Id
-	@GeneratedValue(strategy = GenerationType.SEQUENCE)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 	private String type;
 	private String level;
+	@Column(name = "option_1")
 	private String option1;
+	@Column(name = "option_2")
 	private String option2;
+	@Column(name = "option_3")
 	private String option3;
+	@Column(name = "option_4")
 	private String option4;
 	private String question;
 	private String correctOption;
